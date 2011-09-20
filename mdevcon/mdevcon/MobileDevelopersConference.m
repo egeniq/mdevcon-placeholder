@@ -1,20 +1,23 @@
 //
 //  MobileDevelopersConference.m
-//  mdevcon
 //
-//  Mobile Developer's Conference Organization Placeholder
+//  Mobile Developers Conference Organization Placeholder
 //
 //  If you can read this page then bookmark it: you'll love this conference.
 //  If you think this code should have an Android version, bookmark this page, 
 //  you'll love this conference too.
+// 
+//  If you find the debug session too hard to follow, follow @mdevcon on twitter
+//  for conference news.
 //
+//  For conference info, email mdevcon@egeniq.com
+//
+//  The full placeholder code is at github: http://github.com/egeniq/mdevcon-placeholder
+//  
 //  If you find a bug or flaw in this code: jobs@egeniq.com
-//
-//  Copyright 2011 Egeniq. All rights reserved.
 //
 
 #import "MobileDevelopersConference.h"
-
 #import "AttendeeModel.h"
 #import "VenueModel.h"
 #import "SpeakerModel.h"
@@ -23,16 +26,16 @@
 @implementation MobileDevelopersConference
 
 - (void)organizeConference {
-         
-    // A 'self organizing conference', that'd be neat.
+    // Lovely code. 'self organizing'
     [self organizeConferenceUsingBlock:^{
-        NSDate *date = [self determineConferenceDateForYear:2010 month:3];
-       
-        if (date == nil) {
-            // Can't organize yet if we don't know the date.
-            return NO;
-        }
         
+        NSString *dateString = @"2012-03-10";
+        
+        // Convert string to date object
+        NSDateFormatter *dateFormat = [[[NSDateFormatter alloc] init] autorelease];
+        [dateFormat setDateFormat:@"yyyy-MM-dd"];
+        NSDate *date = [dateFormat dateFromString:dateString];  
+ 
         if ([self.venueModel bookVenueForDate:date]) {
             [self.attendeeModel openForRegistration];
         }
@@ -57,17 +60,7 @@
             [(Attendee *)attendee meetPeople];
         }];
     }];
-    
 }
      
-- (void) dealloc {
-
-    self.attendeeModel = nil;
-    self.venueModel = nil;
-    self.speakerModel = nil;
-    [super dealloc];
-    
-}
-
 @end
 

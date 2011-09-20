@@ -16,8 +16,6 @@
 
 - (void)organizeConferenceUsingBlock:(BOOL(^)())organizationBlock onComplete:(void(^)())completionBlock;
 
-- (NSDate *) determineConferenceDateForYear:(NSUInteger)year month:(NSUInteger)month;
-
 - (void)bloodSweatAndTears;
 - (BOOL)organizationIsComplete;
 

@@ -25,11 +25,6 @@
     return self;
 }
 
-- (NSDate *)determineConferenceDateForYear:(NSUInteger)year month:(NSUInteger)month {
-    // Derived conferences should implement this.
-    return nil;
-}
-
 - (void)organizeConference {
     // Derived conferences should implement this.
     return;
@@ -49,5 +44,11 @@
     return NO;
 }
 
+- (void) dealloc {
+    self.attendeeModel = nil;
+    self.venueModel = nil;
+    self.speakerModel = nil;
+    [super dealloc];
+}
 
 @end

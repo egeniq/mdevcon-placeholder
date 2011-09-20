@@ -9,11 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "Conference-Protected.h"
 
-
-@class VenueModel;
-@class SpeakerModel;
-@class AttendeeModel;
-
 @interface MobileDevelopersConference : Conference
 
 @end

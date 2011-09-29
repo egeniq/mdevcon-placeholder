@@ -29,7 +29,7 @@
 
 - (NSArray *)confirmedAttendees {
     
-    return [NSArray arrayWithObjects: @"Felix", @"Peter", @"Allen", @"Thijs", @"Base", @"Ivo", nil]; 
+    return [NSArray arrayWithObjects: @"Felix", @"Peter", @"Allen", @"Thijs", @"Bas", @"Ivo", nil]; 
 }
 
 @end

@@ -54,10 +54,10 @@
 
     } onComplete:^{
         [self.venueModel openConference:self];
-        [[self.attendeeModel confirmedAttendees] enumerateObjectsUsingBlock:^(id attendee, NSUInteger index, BOOL *stop) {
-            [(Attendee *)attendee learn];
-            [(Attendee *)attendee haveFun];
-            [(Attendee *)attendee meetPeople];
+        [[self.attendeeModel confirmedAttendees] enumerateObjectsUsingBlock:^(Attendee *attendee, NSUInteger index, BOOL *stop) {
+            [attendee learn];
+            [attendee haveFun];
+            [attendee meetPeople];
         }];
     }];
 }

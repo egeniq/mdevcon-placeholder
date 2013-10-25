@@ -72,7 +72,7 @@
 		927091F114178C8E006929EF /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attendee.h; sourceTree = "<group>"; };
 		927091F214178C8E006929EF /* Attendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attendee.m; sourceTree = "<group>"; };
 		927091F414178D5E006929EF /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		9CE53B31181AC1AD00B6DBDB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9CE53B31181AC1AD00B6DBDB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		9CE53B33181AC1EA00B6DBDB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +104,6 @@
 		925FBFA71416D76900C45B3B = {
 			isa = PBXGroup;
 			children = (
-				9CE53B31181AC1AD00B6DBDB /* Default-568h@2x.png */,
 				925FBFBC1416D76900C45B3B /* mdevcon */,
 				925FBFE41416D76A00C45B3B /* mdevconTests */,
 				925FBFB51416D76900C45B3B /* Frameworks */,
@@ -145,6 +144,7 @@
 				925FBFFA1417686B00C45B3B /* Conference.m */,
 				927091E414176A9E006929EF /* Conference-Protected.h */,
 				927091F414178D5E006929EF /* MainWindow.xib */,
+				9CE53B31181AC1AD00B6DBDB /* Default-568h@2x.png */,
 				9CE53B33181AC1EA00B6DBDB /* Images.xcassets */,
 			);
 			path = mdevcon;

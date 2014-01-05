@@ -54,7 +54,7 @@
 
     } onComplete:^{
         [self.venueModel openConference:self];
-        [[self.attendeeModel confirmedAttendees] enumerateObjectsUsingBlock:^(Attendee *attendee, NSUInteger index, BOOL *stop) {
+        [[self.attendeeModel confirmedAttendees] enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(Attendee *attendee, NSUInteger index, BOOL *stop) {
             [attendee learn];
             [attendee haveFun];
             [attendee meetPeople];

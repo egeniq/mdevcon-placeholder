@@ -40,16 +40,8 @@ class MobileDevelopersConference : Event {
                 speaker.callForPapers()
             }
             
-            let timerSource = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
-            dispatch_source_set_timer(timerSource, dispatch_walltime(nil, 0), NSEC_PER_SEC, NSEC_PER_SEC);
-            dispatch_source_set_event_handler(timerSource, { () -> Void in
-                if (self.date.timeIntervalSinceNow > 0) {
-                    completion()
-                } else {
-                    dispatch_suspend(timerSource)
-                }
-            })
-            dispatch_resume(timerSource);
+            let timeToWaitUntilEvent = -self.date.timeIntervalSinceNow
+            dispatch_after(UInt64(Double(NSEC_PER_SEC) * timeToWaitUntilEvent), dispatch_get_main_queue(), completion)
         }
     }
     

@@ -23,7 +23,7 @@ class Venue {
         self.name = name
     }
     
-    func bookVanueForDate(date: NSDate) -> Bool {
+    func bookVenueForDate(date: NSDate) -> Bool {
         return true
     }
     

@@ -9,7 +9,7 @@
 // If you find the debug session too hard to follow, follow @mdevcon on twitter
 // for conference news.
 //
-// Fore conference info, email mdevcon@egeniq.com
+// For conference info, email mdevcon@egeniq.com
 //
 // The full placeholder code is at github: http://github.com/egeniq/mdevcon-placeholder
 //
@@ -31,7 +31,7 @@ class MobileDevelopersConference : Event {
     }
     
     func prepareConference(completion: () -> Void) {
-        if venue.bookVanueForDate(date) {
+        if venue.bookVenueForDate(date) {
             for attendee in attendees {
                 attendee.notifyAboutEvent(self)
             }
